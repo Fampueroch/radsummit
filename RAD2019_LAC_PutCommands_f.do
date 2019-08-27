@@ -77,6 +77,8 @@ putpdf save "putpdf.pdf", replace
 
 
 ********* EXERCISE*********************
+*****************************
+*new command created: tabreport
 sysuse auto, clear
 
 cap program drop tabreport
@@ -85,13 +87,14 @@ program define tabreport
 syntax varlist (numeric max=2)  [if] [, title ] 
  dis as txt "varlist: `varlist'"
  
-	table1 if `varlist'] `varlis` 
+	table1 if `varlist', `title'
 end
 
 	putpdf clear
 	putpdf begin
 	putpdf paragraph
-
+	
+******************************************	
 
 ******************************* Putdocx **************************************
 
