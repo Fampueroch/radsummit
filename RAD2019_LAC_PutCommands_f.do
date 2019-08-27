@@ -77,6 +77,7 @@ putpdf save "putpdf.pdf", replace
 
 
 ********* EXERCISE*********************
+*****fio**********************
 sysuse auto, clear
 
 cap program drop tabreport
@@ -91,7 +92,8 @@ end
 	putpdf clear
 	putpdf begin
 	putpdf paragraph
-
+	
+******************************************	
 
 ******************************* Putdocx **************************************
 
